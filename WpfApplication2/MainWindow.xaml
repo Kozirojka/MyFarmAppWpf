@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Title="windowBeforeStart" Height="225" Width="300" >
+        
+    <Grid>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Select Difficulty Level:" FontSize="20" FontWeight="Bold" Margin="0,0,0,25"/>
+            <RadioButton Grid.Row="1" x:Name="EasyRadioButton" Content="Easy" FontSize="16"/>
+            <RadioButton Grid.Row="2" x:Name="MediumRadioButton" Content="Normal" FontSize="16"/>
+        </Grid>
+        
+        <Button x:Name="StartButton" Content="Start" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Click="StartButton_Click"/>
+
+    </Grid>
+</Window>

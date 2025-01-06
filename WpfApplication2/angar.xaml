@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApplication2.angar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApplication2"
+        Icon="C:\Users\Kostya\Desktop\WpfApplication2\WpfApplication2\icons\swords.png"
+        mc:Ignorable="d"
+        Background="LightGray"
+        Title="ModalWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- First Button -->
+        <StackPanel Grid.Row="0" Margin="10" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button Width="50" Height="50" Click="Andarbutton_Click">
+                <MediaElement x:Name="firstMediaElement"
+                              Source="C:\Users\Kostya\Desktop\WpfApplication2\WpfApplication2\angarPicture\buikdingTwo.png"
+                              LoadedBehavior="Play"
+                              UnloadedBehavior="Stop"
+                              Width="50"
+                              Height="50"
+                              Stretch="Fill"
+                              MediaEnded="MediaElement_MediaEnded"/>
+            </Button>
+            <TextBlock Text="Angar" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{1A3B22CB-6A36-490C-8098-E9F1D863C11A}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>WpfApplication2</RootNamespace>
+        <AssemblyName>WpfApplication2</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <WarningLevel>4</WarningLevel>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="System.Xaml">
+            <RequiredTargetFramework>4.0</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="WindowsBase"/>
+        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ApplicationDefinition Include="App.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </ApplicationDefinition>
+        <Compile Include="abstractFabric.cs" />
+        <Compile Include="angar.xaml.cs">
+          <DependentUpon>angar.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Decorator.cs" />
+        <Compile Include="FarmSingleton.cs" />
+        <Compile Include="fasadMusicVisual.cs" />
+        <Compile Include="gardenFasade.cs" />
+        <Compile Include="lab6Dir\FarmWeatherContext.cs" />
+        <Compile Include="lab6Dir\patternMethod.cs" />
+        <Compile Include="lab6Dir\strategyBehevior.cs" />
+        <Compile Include="player.cs" />
+        <Compile Include="protorype.cs" />
+        <Compile Include="Ratusha.xaml.cs">
+          <DependentUpon>Ratusha.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="tractorClass.cs" />
+        <Compile Include="tractorMenu.xaml.cs">
+          <DependentUpon>tractorMenu.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="windowBefoStart.xaml.cs">
+          <DependentUpon>windowBefoStart.xaml</DependentUpon>
+        </Compile>
+        <Page Include="angar.xaml" />
+        <Page Include="MainWindow.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </Page>
+        <Compile Include="App.xaml.cs">
+            <DependentUpon>App.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="MainWindow.xaml.cs">
+            <DependentUpon>MainWindow.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Page Include="ModalWindow.xaml" />
+        <Page Include="Ratusha.xaml" />
+        <Page Include="tractorMenu.xaml" />
+        <Page Include="windowBefoStart.xaml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="ModalWindow.xaml.cs">
+          <DependentUpon>ModalWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Properties\AssemblyInfo.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTime>True</DesignTime>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="1546691.png" />
+      <Content Include="angarPicture\buikdingTwo.png" />
+      <Content Include="angarPicture\generalBuildin1.png" />
+      <Content Include="arrow.mp3" />
+      <Content Include="backfon.png" />
+      <Content Include="blueslime_dash_preview.gif" />
+      <Content Include="buildingSound.mp3" />
+      <Content Include="calmImageFolder\calm1.png" />
+      <Content Include="calmImageFolder\calm2.png" />
+      <Content Include="calmImageFolder\calm3.png" />
+      <Content Include="closeDore.mp3" />
+      <Content Include="coinFrame\coin_frame.png" />
+      <Content Include="coinFrame\coin_frame2.png" />
+      <Content Include="coinFrame\coin_frame3.png" />
+      <Content Include="game-level-complete-143022.mp3" />
+      <Content Include="Gifs\archer.gif" />
+      <Content Include="Gifs\kZ9CIA.gif" />
+      <Content Include="Gifs\last knight1.gif" />
+      <Content Include="Gifs\ridder.gif" />
+      <Content Include="IconForWether\rainyICON\rainy1.png" />
+      <Content Include="IconForWether\rainyICON\rainy2.png" />
+      <Content Include="IconForWether\rainyICON\rainy3.png" />
+      <Content Include="IconForWether\rainyICON\rainy4.png" />
+      <Content Include="IconForWether\rainyICON\rainy5.png" />
+      <Content Include="IconForWether\rainyICON\rainy6.png" />
+      <Content Include="IconForWether\rainyICON\rainy7.png" />
+      <Content Include="IconForWether\rainyICON\rainy8.png" />
+      <Content Include="IconForWether\snowyiCON\windy1.png" />
+      <Content Include="IconForWether\snowyiCON\windy2.png" />
+      <Content Include="IconForWether\snowyiCON\windy3.png" />
+      <Content Include="IconForWether\snowyiCON\windy4.png" />
+      <Content Include="IconForWether\sunnyICON\Screenshot_1-Photoroom.png-Photoroom.png" />
+      <Content Include="icons\3boZkd.gif" />
+      <Content Include="icons\fox.png" />
+      <Content Include="icons\foxIcon.png" />
+      <Content Include="icons\swords.png" />
+      <Content Include="icons\swordsIcon.png" />
+      <Content Include="imageForFox\output-onlinepngtools (1).png" />
+      <Content Include="imageForFox\output-onlinepngtools (2).png" />
+      <Content Include="imageForFox\output-onlinepngtools (3).png" />
+      <Content Include="imageForFox\output-onlinepngtools (5).png" />
+      <Content Include="imageForFox\output-onlinepngtools (6).png" />
+      <Content Include="imageForFox\output-onlinepngtools (7).png" />
+      <Content Include="imageForFox\output-onlinepngtools (8).png" />
+      <Content Include="imageForFox\output-onlinepngtools.png" />
+      <Content Include="inviroment\carrot.png" />
+      <Content Include="inviroment\houseGPED.png" />
+      <Content Include="inviroment\New Piskel.png" />
+      <Content Include="openTrue.mp3" />
+      <Content Include="other\foxFirghterFrame1.png" />
+      <Content Include="other\FoxStay.png" />
+      <Content Include="other\GPSWOrk.png" />
+      <Content Include="other\grass.png" />
+      <Content Include="other\pixil-frame-0.png" />
+      <Content Include="other\tractorPNG.png" />
+      <Content Include="punch.mp3" />
+      <Content Include="slimeMovement\pat_frames.png" />
+      <Content Include="slimeMovement\pat_frames1.png" />
+      <Content Include="slimeMovement\pat_frameslast.png" />
+      <Content Include="slimeMovement\pat_frames_2.png" />
+      <Content Include="slimeMovement\pat_frames_6.png" />
+      <Content Include="slimeMovement\Screenshot_5.png" />
+      <Content Include="slimeMovement\pat_frames4.png" />
+      <Content Include="sonAG.mp3" />
+      <Content Include="sword.mp3" />
+      <Content Include="tractor-engine-27641.mp3" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
